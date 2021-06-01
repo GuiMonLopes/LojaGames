@@ -30,8 +30,8 @@ public class Categoria {
 	@Size(max=255)
 	private String descricao;
 	
-	@OneToMany(mappedBy = "produto", cascade = CascadeType.ALL)
-	@JsonIgnoreProperties("produto")
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("categoria")
 	private List<Produto> produto;
 	
 

@@ -29,10 +29,10 @@ public class Produto {
 	
 	@NotBlank
 	@Size(max=255)
-	private String descricao;
+	private String descricaoProduto;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("categoria")
+	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
 
 	public long getIdProduto() {
@@ -60,11 +60,11 @@ public class Produto {
 	}
 
 	public String getDescricaoProduto() {
-		return descricao;
+		return descricaoProduto;
 	}
 
 	public void setDescricaoProduto(String descricao) {
-		this.descricao = descricao;
+		this.descricaoProduto = descricao;
 	}
 
 	public Categoria getCategoria() {

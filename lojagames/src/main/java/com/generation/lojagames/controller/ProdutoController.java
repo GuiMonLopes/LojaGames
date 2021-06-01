@@ -19,7 +19,7 @@ import com.generation.lojagames.repository.ProdutoRepository;
 import com.generation.lojagames.model.Produto;
 
 @RestController
-@RequestMapping("/produto")
+@RequestMapping("/produtos")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProdutoController {
 
@@ -39,7 +39,7 @@ public class ProdutoController {
 	
 	@GetMapping("/descricao/{descricao}")
 	public ResponseEntity<List<Produto>> findByDescricaoTitulo(@PathVariable String descricao){
-		return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(descricao));
+		return ResponseEntity.ok(repository.findAllByDescricaoProdutoContainingIgnoreCase(descricao));
 	}
 	
 	@PostMapping
